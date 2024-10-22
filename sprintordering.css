@@ -1,0 +1,87 @@
+/* CSS for the Sprint Ordering page (sprintordering.html) */
+
+.order-section {
+    margin-top: 200px;
+    padding: 50px 20px;
+    background-color: rgba(20, 20, 20, 0.8); /* Dark background */
+    border: 2px solid #ff007b; /* Neon pink border */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 123, 0.6); /* Pink glow effect */
+    color: white; /* White text */
+    text-align: center; /* Center align text */
+}
+
+.order-section h2 {
+    color: #ff007b; /* Using the same color as the home page */
+}
+
+.order-section label {
+    display: block;
+    margin-bottom: 10px;
+    color: #df1e9e;
+}
+
+.order-section input,
+.order-section select {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border: 2px solid #ff007b; /* Consistent border color */
+    border-radius: 5px;
+    background-color: #222; /* Background color for inputs */
+    color: #fff; /* Text color */
+    transition: border-color 0.3s ease;
+}
+
+.order-section input:focus,
+.order-section select:focus {
+    border-color: #fff; /* Changes border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+fieldset {
+    margin-bottom: 20px; /* Add space between fieldsets */
+}
+
+.neon-button {
+    padding: 10px 20px;
+    border: 2px solid #ff007b;
+    background-color: #ff007b; /* Neon pink background */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.neon-button:hover {
+    box-shadow: 0 0 10px rgba(255, 0, 123, 0.8); /* Add glow on hover */
+    background-color: #fff; /* Change on hover */
+    color: #ff007b; /* Neon pink text on hover */
+}
+
+#confirmation-message {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #00ff7f; /* Light green border for confirmation */
+    background-color: rgba(0, 255, 127, 0.2); /* Light green background */
+    color: #00ff7f; /* Text color for confirmation */
+    border-radius: 5px;
+    display: none; /* Hide by default */
+}
+
+.hidden {
+    display: none; /* Class to hide elements */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .order-section {
+        margin-top: 100px;
+        padding: 30px 10px;
+    }
+
+    .order-section input,
+    .order-section select {
+        width: 90%;
+    }
+}
