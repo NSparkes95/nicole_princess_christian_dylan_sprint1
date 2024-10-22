@@ -235,20 +235,16 @@ body, html {
 .history-description {
     font-size: 14pt;
     color: white;
-    flex: 2;
     line-height: 1.6;
-    text-align: left;
-    float: left;
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     padding: 20px;
     border-radius: 10px;
 }
 
 .history-photo {
-    width: 200px;
-    height: 400px;
-    float: right;
-    flex: 1;
+    width: 90%;
+    height: auto;
     border-radius: 10px;
 }
 
