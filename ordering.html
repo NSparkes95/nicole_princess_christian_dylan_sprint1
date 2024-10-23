@@ -1,0 +1,82 @@
+<!--
+Name: Christian Rose
+Date: 2024-10-22
+Description: Sprint Ordering Page. This page allows customers to place an order for food items. 
+The page includes a form with fields for selecting a menu item, entering a quantity, 
+and providing customer information. The form also includes a submit button. When the form is submitted, 
+the order is added to a list of orders displayed on the page.
+The page also includes a confirmation message that is displayed when an order is submitted successfully. 
+The page uses a separate CSS file for styling and a separate JavaScript file for interactivity.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="Ordering.css"> <!-- Link to ordering stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="background">
+        <header class="header">
+            <img src = "Images/logo.jpg" alt="Sprint Logo" class="circular-logo">
+            <nav class="neon-nav">
+                <ul>
+                    <li><a href="sprinthome.html">Home</a></li>
+                    <li><a href="history.html">The History</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="ordering.html">Order</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class = "neon-border-container">
+                <div class="neon-border" ></div>
+            </div>
+            <form id="contest-form" class="email-form">
+                <input type="email" id="contest-email" placeholder="Enter your email" required>
+                <button type="submit">Enter Contest</button>
+            </form>
+            
+        </header>
+
+        <section id="order" class="order-section content-wrapper"> <!-- Using content-wrapper for consistent padding -->
+            <h2>Place Your Order</h2>
+            <form id="order-form">
+                <div class="menu-item">
+                    <label for="item-select">Select an Item:</label>
+                    <select id="item-select">
+                        <option value="Big Gary Chicken Sandwich">Big Gary Chicken Sandwich</option>
+                        <option value="Veggie Delight Burger">Veggie Delight Burger</option>
+                        <!-- This is where menu items can be added as needed -->
+                    </select>
+                </div>
+                <div class="quantity">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" min="1" required>
+                </div>
+                <div class="customer-info">
+                    <label for="customer-name">Your Name:</label>
+                    <input type="text" id="customer-name" required>
+                    <label for="customer-email">Your Email:</label>
+                    <input type="email" id="customer-email" required>
+                </div>
+                <button type="submit" class="neon-button">Submit Order</button> <!-- Added a class for consistent styling -->
+            </form>
+            <div id="confirmation-message" class="hidden"></div>
+        </section>
+        <footer class="footer">
+            <div class="social-media-icons">
+                <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+
+        <div class="content-wrapper"></div>
+    </div>
+
+    <script src="Ordering.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>

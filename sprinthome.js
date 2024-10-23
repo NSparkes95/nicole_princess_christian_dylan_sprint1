@@ -3,7 +3,7 @@ window.addEventListener('scroll', function() {
     const backgroundSection = document.querySelector('.content-wrapper');
     
     // Move the background at a slower rate to create the parallax effect
-    backgroundSection.style.backgroundPositionY = '${scrollPosition * 0.5}px';
+    backgroundSection.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
 });
 
 
@@ -17,15 +17,23 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 document.querySelectorAll('.neon-nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+    anchor.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        // Check if the href starts with # (for in-page nav)
+        if (href.startsWith('#')) {
+            e.preventDefault(); //Prevent default only
+            const targetSection = document.quertSelector(href);
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+    })
+})
 
-        const targetSection = document.querySelector(this.getAttribute('href'));
-        targetSection.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+    
+
 
 document.getElementById('contest-form').addEventListener('submit', function(event) {
     event.preventDefault();

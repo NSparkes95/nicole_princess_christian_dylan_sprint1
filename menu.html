@@ -1,12 +1,18 @@
+<!--
+Name: Christian Rose
+Date: 2024-10-22
+Description: Menu Page. This page displays the available food items for customers to order. 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sprint</title>
-    <link rel="stylesheet" href="sprinthome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="Home.css"> <!-- Link to homepage stylesheet -->
+    <link rel="stylesheet" href="Menu.css"> <!-- Link to menu-specific stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
     <div class="background">
         <header class="header">
@@ -29,31 +35,27 @@
             </form>
             
         </header>
-        <main>
-            <div class="slideshow-container" >
-                <div class="prev" onclick="moveSlides(-1)">❮</div>
-                <div class="next" onclick="moveSlides(1)">❯</div>
-                
-            </div>
-            <p class="plain-text">Check out some of our fan favourites!</p>
-            <div class="neon-border-container">
-                <div class="neon-border"></div>
-            </div>
 
-            <div class="history-section">
-                <h2 class="history-title">Welcome to Retro Diner: A Timeless Icon</h2>
-                <div class="history-content">
-                    <p class="history-description">
-                        Established in 1952 by Douglas "Duke" Rayson, Retro Diner has been a beloved destination for generations, blending classic American charm with larger-than-life stories. From its beginnings as a car enthusiasts haven to its cosmic pancakes and time-traveling visitors, this family-run diner has become legendary for more than just its food. Now under the care of Lily Rayson, Retro Diner continues to serve comfort food with a side of nostalgia and mystery. <a href="history.html" class="link-about">[Read More]</a>
-                    </p>
-                    
-                </div>
-                <img src="Images/diner_horizontal_collage.jpg" alt="Diner Collage" class="history-photo">
+        <section id="menu" class="menu-section content-wrapper"> <!-- Using content-wrapper for consistent padding -->
+            <h2>Our Menu</h2>
+            <div class="menu-item">
+                <h3>Big Gary Chicken Sandwich</h3>
+                <img src="Images/big-gary-chicken-sandwich.jpg" alt="Big Gary Chicken Sandwich" class="menu-image">
+                <p>Juicy chicken breast with lettuce, tomato, and our special sauce.</p>
+                <p>Price: $9.99</p>
             </div>
-            <div class="neon-border-container">
-                <div class="neon-border"></div>
+            <div class="menu-item">
+                <h3>Veggie Delight Burger</h3>
+                <img src="Images/veggie-delight-burger.jpg" alt="Veggie Delight Burger" class="menu-image">
+                <p>Grilled vegetable patty with fresh veggies and a tangy sauce.</p>
+                <p>Price: $8.99</p>
             </div>
-        </main>
+            <!-- Additional menu items can be added here -->
+            
+        </section>
+        <div class="neon-border-container">
+            <div class="neon-border"></div>
+        </div>
         <footer class="footer">
             <div class="social-media-icons">
                 <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -65,7 +67,5 @@
         
        <div class="content-wrapper"></div>
     </div>
-   
-    <script src="sprinthome.js"></script>
 </body>
 </html>

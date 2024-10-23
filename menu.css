@@ -1,3 +1,5 @@
+/* General styles for the menu page */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -9,6 +11,7 @@ body, html {
 
 .background {
     /* full height section */
+    width: 100%;
     height: 100%;
     background-image: url('./Images/background.jpg');
     background-size: cover;
@@ -74,8 +77,6 @@ body, html {
     border: 2px solid transparent;
     position: relative;
     transition: 0.3s ease;
-    z-index: 10; /* ensures the links are clickable */
-    pointer-events: auto; 
 }
 
 .neon-nav ul li a:hover {
@@ -144,130 +145,58 @@ body, html {
     box-shadow: 0 0 15px rgba(255, 0, 123, 0.8); /* Stronger pink glow on hover */
 }
 
-.plain-text {
-    color: white; /* Set text color to black or any neutral color */
-    font-family: Arial, sans-serif; /* Set a simple font family */
-    text-shadow: none; /* Remove any neon effects */
-    font-size: 18pt; /* Set a normal font size */
-    font-weight: normal; /* Set normal weight */
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+.menu-section {
+    margin-top: 200px; /* Space from the top */
+    padding: 50px 20px; /* Padding for the section */
+    background-color: rgba(20, 20, 20, 0.8); /* Darker background */
+    border: 2px solid #ff007b; /* Neon pink border */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 123, 0.6); /* Pink glow effect */
+    color: white; /* White text */
+    text-align: center; /* Center align text */
+}
+
+.menu-section h2 {
+    color: #ff007b; /* Neon pink header */
+}
+
+.menu-item {
+    margin-bottom: 30px; /* Space between menu items */
     padding: 20px;
+    border: 2px solid #ff007b; /* Neon pink border */
     border-radius: 10px;
+    background-color: #222; /* Darker background for items */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
-/* Slideshow Container */
-.slideshow-container {
-    position: relative;
-    max-width: 70%;
-    height: 500px;
-    padding-top: 90px ;
-    overflow: hidden;
-    border-radius: 10px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+.menu-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
 }
 
-/* Slides */
-.slide {
-    display: none;
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
+.menu-image {
+    width: 100%; /* Responsive images */
+    max-width: 300px; /* Max width for images */
+    border-radius: 5px; /* Rounded corners for images */
 }
 
-.slide.active {
-    display: block;
+.menu-item h3 {
+    color: #df1e9e; /* Slightly lighter pink for item names */
 }
 
-/*Nav buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 24pt;
-    transition: 0.6s ease;
-    user-select: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
+.menu-item p {
+    color: #ccc; /* Light gray for description and price */
 }
 
-.prev {
-    left: 10px;
-}
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .menu-section {
+        margin-top: 100px; /* Reduced margin for smaller screens */
+        padding: 30px 10px; /* Adjusted padding for smaller screens */
+    }
 
-.next {
-    right: 10px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba (255, 0, 123, 0.8);
-}
-
-.history-section{
-    padding: 20px;
-    text-align:center;
-    margin:0;
-    font-family: Arial, sans-serif;
-}
-
-.history-title {
-    font-size: 18pt;
-    color:white;
-    margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.history-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.history-description {
-    font-size: 14pt;
-    color: white;
-    line-height: 1.6;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.history-photo {
-    width: 90%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.link-about {
-    text-decoration: none; /* Remove underline */
-    color: #ff007b; /* Neon pink text color */
-    font-weight: bold; /* Bold text */
-    font-size: 18px; /* Match the site’s font size */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
-    text-shadow: 
-        0 0 5px #ff007b,
-        0 0 10px #ff007b, 
-        0 0 20px rgba(255, 0, 123, 0.8); /* Neon glow effect */
-}
-
-.link-about:hover {
-    color: #ffffff; /* Change text to white on hover */
-    text-shadow: 
-        0 0 10px #ffffff, 
-        0 0 20px #ffffff, 
-        0 0 30px rgba(255, 255, 255, 0.8); /* Glow becomes white on hover */
+    .menu-item {
+        margin-bottom: 20px; /* Adjusted spacing for smaller screens */
+    }
 }
 
 .footer {
