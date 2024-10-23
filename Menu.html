@@ -5,35 +5,38 @@ Description: Menu Page. This page displays the available food items for customer
 -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu</title>
-    <link rel="stylesheet" href="Home.css"> <!-- Link to homepage stylesheet -->
-    <link rel="stylesheet" href="Menu.css"> <!-- Link to menu-specific stylesheet -->
-</head>
-<body>
+    <link rel="stylesheet" href="Home.css" />
+    <!-- Link to homepage stylesheet -->
+    <link rel="stylesheet" href="Menu.css" />
+    <!-- Link to menu-specific stylesheet -->
+  </head>
+  <body>
     <div class="background">
-        <header class="header">
-            <img src="Images/logo.jpg" alt="Sprint Logo" class="circular-logo">
-            <nav class="neon-nav">
-                <ul>
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="#about">About the Owner</a></li>
-                    <li><a href="Menu.html">Menu</a></li>
-                    <li><a href="Ordering.html">Order</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </nav>
-            
-            <div class="neon-border-container">
-                <div class="neon-border"></div>
-            </div>
-        </header>
+      <header class="header">
+        <img src="Images/logo.jpg" alt="Sprint Logo" class="circular-logo" />
+        <nav class="neon-nav">
+          <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="#about">About the Owner</a></li>
+            <li><a href="Menu.html">Menu</a></li>
+            <li><a href="Ordering.html">Order</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
 
-        <section id="menu" class="menu-section content-wrapper"> <!-- Using content-wrapper for consistent padding -->
-            <h2>Our Menu</h2>
-            <div class="menu-item">
+        <div class="neon-border-container">
+          <div class="neon-border"></div>
+        </div>
+      </header>
+
+      <section id="menu" class="menu-section content-wrapper">
+        <!-- Using content-wrapper for consistent padding -->
+        <h2>Our Menu</h2>
+        <!-- <div class="menu-item">
                 <h3>Big Gary Chicken Sandwich</h3>
                 <img src="Images/big-gary-chicken-sandwich.jpg" alt="Big Gary Chicken Sandwich" class="menu-image">
                 <p>Juicy chicken breast with lettuce, tomato, and our special sauce.</p>
@@ -43,10 +46,129 @@ Description: Menu Page. This page displays the available food items for customer
                 <h3>Veggie Delight Burger</h3>
                 <img src="Images/veggie-delight-burger.jpg" alt="Veggie Delight Burger" class="menu-image">
                 <p>Grilled vegetable patty with fresh veggies and a tangy sauce.</p>
-                <p>Price: $8.99</p>
-            </div>
-            <!-- Additional menu items can be added here -->
-        </section>
+                <p>Price: $8.99</p> -->
+        <!-- </div> -->
+        <div class="menu-item">
+          <h3>Big Gary Southern Chicken</h3>
+          <img
+            src="/Images/Boneless chick.jpg"
+            alt="Big Gary Southern Chicken"
+            class="menu-image"
+          />
+          <p>
+            Southern Fried Boneless Chicken, with lettuce, tomato, and our
+            special sauce.
+          </p>
+          <p>Price: $9.99</p>
+        </div>
+        <div class="menu-item">
+          <h3>Veggie Delight Burger</h3>
+          <img
+            src="/Images/burger.jpg"
+            alt="Veggie Delight Burger"
+            class="menu-image"
+          />
+          <p>Grilled vegetable patty with fresh veggies and a tangy sauce.</p>
+          <p>Price: $8.99</p>
+        </div>
+        <div class="menu-item">
+          <h3>Canadian Double Stack</h3>
+          <img
+            src="/Images/Double Stack.jpg"
+            alt="Canadian Double Stack"
+            class="menu-image"
+          />
+          <p>Two beef patties, cheddar cheese, lettuce,tomato, mayo.</p>
+          <p>price: $6.99</p>
+        </div>
+        <div class="menu-item">
+          <h3>Signature Combo</h3>
+          <img
+            src="/Images/Signature combo.jpg"
+            alt="Signature combo"
+            class="menu-image"
+          />
+          <p>Burger, Hotdog and Fries.</p>
+          <p>Price: $12.99</p>
+        </div>
+        <div class="menu-item">
+          <h3>Power House HotDogs</h3>
+          <img
+            src="/Images/hotDog.jpg"
+            alt="Power house HotDogs"
+            class="menu-image"
+          />
+          <p>3 HotDogs, onion, jalapeno, cilantro, ketchup and mustard.</p>
+          <p>Price: $10.99</p>
+        </div>
+
+        <div class="menu-item">
+          <h3>Retro Salad</h3>
+          <img src="/Images/Salad.jpg" alt="Retro Salad" class="menu-image" />
+          <p>
+            Greens, cucumber, tomatoe, Chicken And Choice of Cheese toppings.
+          </p>
+          <p>Price: $5.99</p>
+        </div>
+        <div class="menu-item">
+          <img
+            src="/Images/fries.jpg"
+            alt="fries"
+            width="280px"
+            height="200px"
+            class="Extra"
+          />
+
+          <h2>Sides/ Extras</h2>
+
+          <ul>
+            Fries
+          </ul>
+          <ul>
+            SweetPotatoe Fries + $1
+          </ul>
+          <ul>
+            Grilled chicken + $3
+          </ul>
+          <ul>
+            Poutines
+          </ul>
+          <ul>
+            Onion Rings
+          </ul>
+          <ul>
+            Salads +$1
+          </ul>
+
+          <hr />
+
+          <h2>Desserts</h2>
+          <img
+            src="/Images/dessert.jpg"
+            alt="Desserts"
+            width="180px"
+            height="130px"
+            class="Align"
+          />
+
+          <ul>
+            Chocolate glazed donut &nbsp; &nbsp;$3
+          </ul>
+          <ul>
+            Butter Croissant &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp;$2
+          </ul>
+          <ul>
+            Ice-cream Fudge cake &nbsp; &nbsp; $2.50
+          </ul>
+          <ul>
+            Cinnamon Buns &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+            $1.50
+          </ul>
+        </div>
+
+        <!-- Additional menu items can be added here -->
+      </section>
     </div>
-</body>
+  </body>
 </html>

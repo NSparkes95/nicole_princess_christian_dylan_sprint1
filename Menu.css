@@ -60,7 +60,7 @@ body {
     padding: 20px;
     border: 2px solid #ff007b; /* Neon pink border */
     border-radius: 10px;
-    background-color: #222; /* Darker background for items */
+    /*background-color: #222; /* Darker background for items */
     transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
@@ -92,4 +92,22 @@ body {
     .menu-item {
         margin-bottom: 20px; /* Adjusted spacing for smaller screens */
     }
+}
+
+/* CSS Addition */
+.Extra{
+    float:right;
+    padding:10px;
+    border-radius: 50%;
+}
+
+ul{
+    text-align: left;
+    border: 3px;
+}
+
+.Align {
+    float: right;
+    padding: 20px;
+    border-radius: 50%;
 }
