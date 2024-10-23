@@ -1,0 +1,136 @@
+/* CSS for the Sprint Ordering page (ordering.html) */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Use a general font */
+}
+
+.background {
+    background-color: #000; /* Example background color */
+    min-height: 100vh; /* Full height background */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    justify-content: flex-start; /* Align items at the top */
+}
+
+.header {
+    width: 100%; /* Full width header */
+    text-align: center; /* Center header content */
+    padding: 20px 0; /* Padding for the header */
+}
+
+.circular-logo {
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #ff007b; /* Add pink neon border */
+    box-shadow: 
+        0 0 20px rgba(255, 0, 123, 0.8),
+        0 0 30px rgba(255, 0, 123, 0.6); /* Add glow effect */
+    transform: rotate(-25deg);
+    float: top;
+}
+
+.neon-nav {
+    margin-top: 20px; /* Space above nav */
+}
+
+.neon-nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.neon-nav li {
+    display: inline; /* Inline items */
+    margin: 0 15px; /* Space between menu items */
+}
+
+.neon-nav a {
+    color: #ff007b; /* Neon pink text */
+    text-decoration: none; /* Remove underline */
+}
+
+.order-section {
+    width: 80%;
+    margin-top: 200px; /* Space from header */
+    padding: 50px 20px;
+    background-color: rgba(20, 20, 20, 0.8); /* Dark background */
+    border: 2px solid #ff007b; /* Neon pink border */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 123, 0.6); /* Pink glow effect */
+    color: white; /* White text */
+    text-align: center; /* Center align text */
+}
+
+.order-section h2 {
+    color: #ff007b; /* Color for the heading */
+}
+
+.order-section label {
+    display: block;
+    margin-bottom: 10px;
+    color: #df1e9e; /* Label color */
+}
+
+.order-section input,
+.order-section select {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border: 2px solid #ff007b; /* Consistent border color */
+    border-radius: 5px;
+    background-color: #222; /* Background color for inputs */
+    color: #fff; /* Text color */
+    transition: border-color 0.3s ease;
+}
+
+.order-section input:focus,
+.order-section select:focus {
+    border-color: #fff; /* Changes border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.neon-button {
+    padding: 10px 20px;
+    border: 2px solid #ff007b; /* Border for button */
+    background-color: #ff007b; /* Neon pink background */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition effect */
+}
+
+.neon-button:hover {
+    box-shadow: 0 0 10px rgba(255, 0, 123, 0.8); /* Glow effect on hover */
+    background-color: #fff; /* Change background color on hover */
+    color: #ff007b; /* Change text color on hover */
+}
+
+#confirmation-message {
+    margin-top: 20px; /* Space above confirmation message */
+    padding: 15px;
+    border: 2px solid #00ff7f; /* Light green border */
+    background-color: rgba(0, 255, 127, 0.2); /* Light green background */
+    color: #00ff7f; /* Text color for confirmation */
+    border-radius: 5px;
+    display: none; /* Hide by default */
+}
+
+.hidden {
+    display: none; /* Class to hide elements */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .order-section {
+        margin-top: 20px; /* Reduced margin for mobile */
+        padding: 30px 10px; /* Padding adjustments */
+    }
+
+    .order-section input,
+    .order-section select {
+        width: 90%; /* Full width on mobile */
+    }
+}
+

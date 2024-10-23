@@ -1,0 +1,295 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    /* full height section */
+    height: 100%;
+    background-image: url('./Images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+}   
+
+.content-wrapper {
+    padding: 100px 20px; /* Padding to create space for the content */
+    max-width: 800px;    /* Set max-width for the content area */
+    margin: 0 auto;      /* Center the content */
+    color: white;        /* Text color for visibility */
+    text-align: center;
+}
+
+.header {
+    height: 250px;
+    width: 100%;
+}
+
+.circular-logo {
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #ff007b; /* Add pink neon border */
+    box-shadow: 
+        0 0 20px rgba(255, 0, 123, 0.8),
+        0 0 30px rgba(255, 0, 123, 0.6); /* Add glow effect */
+    transform: rotate(-25deg);
+    float: top;
+}
+
+.neon-nav {
+    width: 90%;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #111;
+    margin: 0 auto;
+}
+
+.neon-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.neon-nav ul li {
+    margin: 0 15px;
+}
+
+.neon-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid transparent;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.neon-nav ul li a:hover {
+    /* Neon effect */
+    color: #ff007b; /* Neon pink color */
+}
+
+.neon-border-container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.neon-border {
+    border-bottom: 10px solid #ff007b; /* Neon pink color */
+    width: 90%;
+    /* Neon glow effect on the bottom only */
+    box-shadow: 
+        0 10px 20px rgba(255, 0, 123, 0.8),  /* Glow below the border */
+        0 15px 30px rgba(255, 0, 123, 0.6),
+        0 20px 40px rgba(255, 0, 123, 0.4),
+        0 25px 50px rgba(255, 0, 123, 0.2);
+    
+    padding-bottom: 10px; /* Extra padding for visibility */
+}
+
+.email-form{
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.email-form input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #ff007b; /* Neon pink border */
+    background-color: #111; /* Dark background like the rest of the site */
+    color: #fff; /* White text for readability */
+    box-shadow: 0 0 10px rgba(255, 0, 123, 0.5); /* Subtle pink glow */
+    transition: 0.3s ease-in-out;
+}
+
+.email-form input:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 0, 123, 0.8); /* More intense glow on focus */
+}
+
+.email-form button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 2px solid #ff007b; /* Neon pink border */
+    background-color: #ff007b; /* Neon pink background */
+    color: #fff; /* White text */
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 0, 123, 0.5); /* Pink glow on button */
+}
+
+.email-form button:hover {
+    background-color: #111; /* Dark background on hover */
+    color: #ff007b; /* Neon pink text on hover */
+    box-shadow: 0 0 15px rgba(255, 0, 123, 0.8); /* Stronger pink glow on hover */
+}
+
+.plain-text {
+    color: white; /* Set text color to black or any neutral color */
+    font-family: Arial, sans-serif; /* Set a simple font family */
+    text-shadow: none; /* Remove any neon effects */
+    font-size: 18pt; /* Set a normal font size */
+    font-weight: normal; /* Set normal weight */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 70%;
+    height: 500px;
+    padding-top: 90px ;
+    overflow: hidden;
+    border-radius: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Slides */
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.slide.active {
+    display: block;
+}
+
+/*Nav buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24pt;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba (255, 0, 123, 0.8);
+}
+
+.history-section{
+    padding: 20px;
+    text-align:center;
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+.history-title {
+    font-size: 18pt;
+    color:white;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.history-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.history-description {
+    font-size: 14pt;
+    color: white;
+    line-height: 1.6;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.history-photo {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.link-about {
+    text-decoration: none; /* Remove underline */
+    color: #ff007b; /* Neon pink text color */
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Match the site’s font size */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+    text-shadow: 
+        0 0 5px #ff007b,
+        0 0 10px #ff007b, 
+        0 0 20px rgba(255, 0, 123, 0.8); /* Neon glow effect */
+}
+
+.link-about:hover {
+    color: #ffffff; /* Change text to white on hover */
+    text-shadow: 
+        0 0 10px #ffffff, 
+        0 0 20px #ffffff, 
+        0 0 30px rgba(255, 255, 255, 0.8); /* Glow becomes white on hover */
+}
+
+.footer {
+    padding-top: 30px ;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.social-media-icons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ff007b; /* Pink hover effect */
+}
