@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sprint</title>
-    <link rel="stylesheet" href="sprinthome.css">
+    <link rel="stylesheet" href="Home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -13,10 +13,10 @@
             <img src = "Images/logo.jpg" alt="Sprint Logo" class="circular-logo">
             <nav class="neon-nav">
                 <ul>
-                    <li><a href="sprinthome.html">Home</a></li>
+                    <li><a href="Home.html">Home</a></li>
                     <li><a href="history.html">The History</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#order">Order</a></li>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="Ordering.html">Order</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
@@ -50,6 +50,30 @@
                 </div>
                 <img src="Images/diner_horizontal_collage.jpg" alt="Diner Collage" class="history-photo">
             </div>
+            <section class = "write-review-section">
+                <h2>Write a Review</h2>
+                <form id="review-form">
+                    <div class="form-group">
+                        <label for="review-name">Enter Your Name:</label>
+                        <input type="text" id="review-name" placeholder="Enter Your Name:" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text">Enter Your Review:</label>
+                        <textarea id="review-text" placeholder="Enter Your Review:" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-rating">Rating:</label>
+                        <select id="review-rating">
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Stars</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">Submit Review</button>
+                </form>
+            </section>
             <div class="neon-border-container">
                 <div class="neon-border"></div>
             </div>
@@ -66,6 +90,6 @@
        <div class="content-wrapper"></div>
     </div>
    
-    <script src="sprinthome.js"></script>
+    <script src="Home.js"></script>
 </body>
 </html>

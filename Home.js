@@ -123,3 +123,35 @@ function autoSlide() {
 // Initialize the slideshow
 createSlides();
 autoSlide();
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('review-form');
+    const reviewList = document.getElementById('review-list');
+
+    // Listen for form submission
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent page reload on form submit
+
+        // Get values from form inputs
+        const name = document.getElementById('review-name').value;
+        const reviewText = document.getElementById('review-text').value;
+        const rating = document.getElementById('review-rating').value;
+
+        // Create a new review element
+        const review = document.createElement('div');
+        review.classList.add('review');
+
+        // Insert review content
+        review.innerHTML = `
+            <p><strong>${name}</strong> - ${rating} Stars</p>
+            <p>${reviewText}</p>
+            <hr>
+        `;
+
+        // Add the new review to the review list
+        reviewList.appendChild(review);
+
+        // Clear form after submission
+        form.reset();
+    });
+});
