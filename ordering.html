@@ -16,25 +16,30 @@ The page uses a separate CSS file for styling and a separate JavaScript file for
     <title>Order Form</title>
     <link rel="stylesheet" href="Home.css"> <!-- Link to homepage stylesheet -->
     <link rel="stylesheet" href="Ordering.css"> <!-- Link to ordering stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 <body>
     <div class="background">
         <header class="header">
-            <img src="Images/logo.jpg" alt="Sprint Logo" class="circular-logo">
+            <img src = "Images/logo.jpg" alt="Sprint Logo" class="circular-logo">
             <nav class="neon-nav">
                 <ul>
                     <li><a href="Home.html">Home</a></li>
-                    <li><a href="#about">About the Owner</a></li>
+                    <li><a href="history.html">The History</a></li>
                     <li><a href="Menu.html">Menu</a></li>
                     <li><a href="Ordering.html">Order</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
-            
-            <div class="neon-border-container">
-                <div class="neon-border"></div>
+            <div class = "neon-border-container">
+                <div class="neon-border" ></div>
             </div>
+            <form id="contest-form" class="email-form">
+                <input type="email" id="contest-email" placeholder="Enter your email" required>
+                <button type="submit">Enter Contest</button>
+            </form>
+            
         </header>
 
         <section id="order" class="order-section content-wrapper"> <!-- Using content-wrapper for consistent padding -->
@@ -62,6 +67,14 @@ The page uses a separate CSS file for styling and a separate JavaScript file for
             </form>
             <div id="confirmation-message" class="hidden"></div>
         </section>
+        <footer class="footer">
+            <div class="social-media-icons">
+                <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+        <div class="content-wrapper"></div>
     </div>
 
     <script src="Ordering.js"></script> <!-- Link to JavaScript file -->

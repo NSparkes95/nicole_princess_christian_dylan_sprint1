@@ -12,25 +12,30 @@ Description: Menu Page. This page displays the available food items for customer
     <link rel="stylesheet" href="Home.css" />
     <!-- Link to homepage stylesheet -->
     <link rel="stylesheet" href="Menu.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Link to menu-specific stylesheet -->
   </head>
   <body>
     <div class="background">
       <header class="header">
-        <img src="Images/logo.jpg" alt="Sprint Logo" class="circular-logo" />
-        <nav class="neon-nav">
-          <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="#about">About the Owner</a></li>
-            <li><a href="Menu.html">Menu</a></li>
-            <li><a href="Ordering.html">Order</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-          </ul>
-        </nav>
-
-        <div class="neon-border-container">
-          <div class="neon-border"></div>
-        </div>
+          <img src = "Images/logo.jpg" alt="Sprint Logo" class="circular-logo">
+          <nav class="neon-nav">
+              <ul>
+                  <li><a href="Home.html">Home</a></li>
+                  <li><a href="history.html">The History</a></li>
+                  <li><a href="Menu.html">Menu</a></li>
+                  <li><a href="Ordering.html">Order</a></li>
+                  <li><a href="#contact">Contact Us</a></li>
+              </ul>
+          </nav>
+          <div class = "neon-border-container">
+              <div class="neon-border" ></div>
+          </div>
+          <form id="contest-form" class="email-form">
+              <input type="email" id="contest-email" placeholder="Enter your email" required>
+              <button type="submit">Enter Contest</button>
+          </form>
+          
       </header>
 
       <section id="menu" class="menu-section content-wrapper">
@@ -169,6 +174,14 @@ Description: Menu Page. This page displays the available food items for customer
 
         <!-- Additional menu items can be added here -->
       </section>
+      <footer class="footer">
+        <div class="social-media-icons">
+            <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+      <div class="content-wrapper"></div>
     </div>
   </body>
 </html>
