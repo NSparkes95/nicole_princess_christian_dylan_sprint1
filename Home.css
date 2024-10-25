@@ -8,23 +8,23 @@ body, html {
 }
 
 .background {
-    /* full height section */
     height: 100%;
     background-image: url('./Images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    display: flex; /* Added display property */
+    flex-direction: column; /* Stack content vertically */
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Stack content vertically */
 }   
 
 .content-wrapper {
-    padding: 100px 20px; /* Padding to create space for the content */
-    max-width: 800px;    /* Set max-width for the content area */
-    margin: 0 auto;      /* Center the content */
-    color: white;        /* Text color for visibility */
+    padding: 100px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
     text-align: center;
 }
 
@@ -37,12 +37,11 @@ body, html {
     width: 20%;
     height: auto;
     border-radius: 50%;
-    border: 5px solid #ff007b; /* Add pink neon border */
+    border: 5px solid #ff007b;
     box-shadow: 
         0 0 20px rgba(255, 0, 123, 0.8),
-        0 0 30px rgba(255, 0, 123, 0.6); /* Add glow effect */
+        0 0 30px rgba(255, 0, 123, 0.6);
     transform: rotate(-25deg);
-    float: top;
 }
 
 .neon-nav {
@@ -77,8 +76,7 @@ body, html {
 }
 
 .neon-nav ul li a:hover {
-    /* Neon effect */
-    color: #ff007b; /* Neon pink color */
+    color: #ff007b;
 }
 
 .neon-border-container {
@@ -89,20 +87,18 @@ body, html {
 }
 
 .neon-border {
-    border-bottom: 10px solid #ff007b; /* Neon pink color */
+    border-bottom: 10px solid #ff007b;
     width: 90%;
-    /* Neon glow effect on the bottom only */
     box-shadow: 
-        0 10px 20px rgba(255, 0, 123, 0.8),  /* Glow below the border */
+        0 10px 20px rgba(255, 0, 123, 0.8),
         0 15px 30px rgba(255, 0, 123, 0.6),
         0 20px 40px rgba(255, 0, 123, 0.4),
         0 25px 50px rgba(255, 0, 123, 0.2);
-    
-    padding-bottom: 10px; /* Extra padding for visibility */
+    padding-bottom: 10px;
 }
 
-.email-form{
-    position:absolute;
+.email-form {
+    position: absolute;
     top: 20px;
     right: 20px;
     display: flex;
@@ -113,63 +109,60 @@ body, html {
 .email-form input {
     padding: 8px;
     border-radius: 5px;
-    border: 2px solid #ff007b; /* Neon pink border */
-    background-color: #111; /* Dark background like the rest of the site */
-    color: #fff; /* White text for readability */
-    box-shadow: 0 0 10px rgba(255, 0, 123, 0.5); /* Subtle pink glow */
+    border: 2px solid #ff007b;
+    background-color: #111;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 0, 123, 0.5);
     transition: 0.3s ease-in-out;
 }
 
 .email-form input:focus {
     outline: none;
-    box-shadow: 0 0 15px rgba(255, 0, 123, 0.8); /* More intense glow on focus */
+    box-shadow: 0 0 15px rgba(255, 0, 123, 0.8);
 }
 
 .email-form button {
     padding: 8px 15px;
     border-radius: 5px;
-    border: 2px solid #ff007b; /* Neon pink border */
-    background-color: #ff007b; /* Neon pink background */
-    color: #fff; /* White text */
+    border: 2px solid #ff007b;
+    background-color: #ff007b;
+    color: #fff;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    box-shadow: 0 0 10px rgba(255, 0, 123, 0.5); /* Pink glow on button */
+    box-shadow: 0 0 10px rgba(255, 0, 123, 0.5);
 }
 
 .email-form button:hover {
-    background-color: #111; /* Dark background on hover */
-    color: #ff007b; /* Neon pink text on hover */
-    box-shadow: 0 0 15px rgba(255, 0, 123, 0.8); /* Stronger pink glow on hover */
+    background-color: #111;
+    color: #ff007b;
+    box-shadow: 0 0 15px rgba(255, 0, 123, 0.8);
 }
 
 .plain-text {
-    color: white; /* Set text color to black or any neutral color */
-    font-family: Arial, sans-serif; /* Set a simple font family */
-    text-shadow: none; /* Remove any neon effects */
-    font-size: 18pt; /* Set a normal font size */
-    font-weight: normal; /* Set normal weight */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-shadow: none;
+    font-size: 18pt;
+    font-weight: normal;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
 }
 
-/* Slideshow Container */
 .slideshow-container {
     position: relative;
     max-width: 70%;
-    height: 500px;
-    padding-top: 90px ;
+    height: 400px;
+    padding-top: 200px;
     overflow: hidden;
     border-radius: 10px;
-    
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
 
-/* Slides */
 .slide {
     display: none;
     width: 100%;
@@ -181,7 +174,6 @@ body, html {
     display: block;
 }
 
-/*Nav buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -206,21 +198,21 @@ body, html {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba (255, 0, 123, 0.8);
+    background-color: rgba(255, 0, 123, 0.8);
 }
 
-.history-section{
+.history-section {
     padding: 20px;
-    text-align:center;
-    margin:0;
+    text-align: center;
+    margin: 0;
     font-family: Arial, sans-serif;
 }
 
 .history-title {
     font-size: 18pt;
-    color:white;
+    color: white;
     margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
 }
@@ -237,7 +229,7 @@ body, html {
     color: white;
     line-height: 1.6;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
 }
@@ -249,28 +241,27 @@ body, html {
 }
 
 .link-about {
-    text-decoration: none; /* Remove underline */
-    color: #ff007b; /* Neon pink text color */
-    font-weight: bold; /* Bold text */
-    font-size: 18px; /* Match the site’s font size */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+    text-decoration: none;
+    color: #ff007b;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
     text-shadow: 
         0 0 5px #ff007b,
-        0 0 10px #ff007b, 
-        0 0 20px rgba(255, 0, 123, 0.8); /* Neon glow effect */
+        0 0 10px #ff007b,
+        0 0 20px rgba(255, 0, 123, 0.8);
 }
 
 .link-about:hover {
-    color: #ffffff; /* Change text to white on hover */
+    color: #ffffff;
     text-shadow: 
         0 0 10px #ffffff, 
         0 0 20px #ffffff, 
-        0 0 30px rgba(255, 255, 255, 0.8); /* Glow becomes white on hover */
+        0 0 30px rgba(255, 255, 255, 0.8);
 }
 
-/*Write a Review Section */
 .write-review-section {
-    background-color: rgba(34,34,34,0.9);
+    background-color: rgba(34, 34, 34, 0.9);
     color: white;
     padding: 40px;
     border-radius: 10px;
@@ -291,7 +282,7 @@ body, html {
 }
 
 label {
-    display:black;
+    display: block; /* Corrected to block */
     font-size: 14px;
     margin-bottom: 5px;
 }
@@ -309,7 +300,7 @@ textarea {
     height: 80px;
 }
 
-button submit-button {
+.submit-button { /* Updated class selector */
     background-color: #ff007b;
     color: white;
     padding: 10px 20px;
@@ -318,7 +309,7 @@ button submit-button {
     cursor: pointer;
 }
 
-button submit-button:hover {
+.submit-button:hover {
     background-color: white;
     color: #ff007b;
 }
@@ -328,9 +319,9 @@ button submit-button:hover {
 }
 
 .footer {
-    padding-top: 30px ;
+    padding-top: 30px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
 }
@@ -350,5 +341,5 @@ button submit-button:hover {
 }
 
 .social-icon:hover {
-    color: #ff007b; /* Pink hover effect */
+    color: #ff007b;
 }

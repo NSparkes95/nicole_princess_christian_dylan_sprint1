@@ -10,47 +10,48 @@
 <body>
     <div class="background">
         <header class="header">
-            <img src = "Images/logo.jpg" alt="Sprint Logo" class="circular-logo">
+            <img src="Images/logo.jpg" alt="Sprint Logo" class="circular-logo">
             <nav class="neon-nav">
                 <ul>
                     <li><a href="Home.html">Home</a></li>
-                    <li><a href="history.html">The History</a></li>
+                    <li><a href="#history">The History</a></li>
                     <li><a href="Menu.html">Menu</a></li>
                     <li><a href="Ordering.html">Order</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
-            <div class = "neon-border-container">
-                <div class="neon-border" ></div>
+            <div class="neon-border-container">
+                <div class="neon-border"></div>
             </div>
             <form id="contest-form" class="email-form">
                 <input type="email" id="contest-email" placeholder="Enter your email" required>
                 <button type="submit">Enter Contest</button>
             </form>
-            
         </header>
+
         <main>
-            <div class="slideshow-container" >
+            <div class="slideshow-container">
                 <div class="prev" onclick="moveSlides(-1)">❮</div>
                 <div class="next" onclick="moveSlides(1)">❯</div>
-                
+                <!-- Slides go here -->
+                <div class="slide active"><!-- Slide 1 content --></div>
+                <div class="slide"><!-- Slide 2 content --></div>
+                <div class="slide"><!-- Slide 3 content --></div>
             </div>
-            <p class="plain-text">Check out some of our fan favourites!</p>
-            <div class="neon-border-container">
-                <div class="neon-border"></div>
-            </div>
+            <p class="plain-text">Check out some of our fan favorites!</p>
 
             <div class="history-section">
                 <h2 class="history-title">Welcome to Retro Diner: A Timeless Icon</h2>
                 <div class="history-content">
                     <p class="history-description">
-                        Established in 1952 by Douglas "Duke" Rayson, Retro Diner has been a beloved destination for generations, blending classic American charm with larger-than-life stories. From its beginnings as a car enthusiasts haven to its cosmic pancakes and time-traveling visitors, this family-run diner has become legendary for more than just its food. Now under the care of Lily Rayson, Retro Diner continues to serve comfort food with a side of nostalgia and mystery. <a href="history.html" class="link-about">[Read More]</a>
+                        Established in 1952 by Douglas "Duke" Rayson, Retro Diner has been a beloved destination for generations, blending classic American charm with larger-than-life stories.
+                        <a href="history.html" class="link-about">[Read More]</a>
                     </p>
-                    
                 </div>
                 <img src="Images/diner_horizontal_collage.jpg" alt="Diner Collage" class="history-photo">
             </div>
-            <section class = "write-review-section">
+
+            <section class="write-review-section">
                 <h2>Write a Review</h2>
                 <form id="review-form">
                     <div class="form-group">
@@ -68,16 +69,14 @@
                             <option value="4">4 Stars</option>
                             <option value="3">3 Stars</option>
                             <option value="2">2 Stars</option>
-                            <option value="1">1 Stars</option>
+                            <option value="1">1 Star</option>
                         </select>
                     </div>
                     <button type="submit" class="submit-button">Submit Review</button>
                 </form>
             </section>
-            <div class="neon-border-container">
-                <div class="neon-border"></div>
-            </div>
         </main>
+
         <footer class="footer">
             <div class="social-media-icons">
                 <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -85,11 +84,8 @@
                 <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
             </div>
         </footer>
-        
-        
-       <div class="content-wrapper"></div>
     </div>
-   
+
     <script src="Home.js"></script>
 </body>
 </html>
