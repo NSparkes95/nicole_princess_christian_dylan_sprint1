@@ -1,7 +1,13 @@
+<!--
+Date: 2024-10-28
+Description: Home Page. This page serves as the main landing page for the Retro Diner website.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprint</title>
     <link rel="stylesheet" href="Home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -27,21 +33,25 @@
                 <input type="email" id="contest-email" placeholder="Enter your email" required>
                 <button type="submit">Enter Contest</button>
             </form>
+            
         </header>
-
         <main>
-            <div class="slideshow-container">
-                <div class="prev" onclick="moveSlides(-1)">❮</div>
-                <div class="next" onclick="moveSlides(1)">❯</div>
-                <!-- Slides go here -->
-                <div class="slide active"><!-- Slide 1 content --></div>
-                <div class="slide"><!-- Slide 2 content --></div>
-                <div class="slide"><!-- Slide 3 content --></div>
-            </div>
-            <p class="plain-text">Check out some of our fan favorites!</p>
 
+            <!-- History Section -->
             <div class="history-section">
                 <h2 class="history-title">Welcome to Retro Diner: A Timeless Icon</h2>
+
+                <!-- Slideshow -->
+                <div class="slideshow-container">
+                    <div class="prev" onclick="moveSlides(-1)">❮</div>
+                    <div class="next" onclick="moveSlides(1)">❯</div>
+                    <!-- Slides go here -->
+                    <div class="slide active"><!-- Slide 1 content --></div>
+                    <div class="slide"><!-- Slide 2 content --></div>
+                    <div class="slide"><!-- Slide 3 content --></div>
+                </div>
+
+                <!-- History Content -->
                 <div class="history-content">
                     <p class="history-description">
                         Established in 1952 by Douglas "Duke" Rayson, Retro Diner has been a beloved destination for generations, blending classic American charm with larger-than-life stories.
@@ -51,6 +61,42 @@
                 <img src="Images/diner_horizontal_collage.jpg" alt="Diner Collage" class="history-photo">
             </div>
 
+                        <!-- Location & Hours Section -->
+            <section class="location-hours">
+                <h2>Location & Hours</h2>
+                <div class="location-details">
+                    <p><strong>Location:</strong> 123 Retro Road, Diner City, USA</p>
+                    <p><strong>Hours of Operation:</strong></p>
+                    <ul>
+                        <li>Monday - Friday: 8 AM - 10 PM</li>
+                        <li>Saturday: 9 AM - 11 PM</li>
+                        <li>Sunday: 10 AM - 9 PM</li>
+                    </ul>
+                </div>
+            </section>
+
+                        <!-- Reviews Section -->
+                        <section class="reviews-section">
+                            <h2>Customer Reviews</h2>
+                            <div class="review">
+                                <p class="review-text">"The Retro Diner is my go-to spot for breakfast! The pancakes are to die for!"</p>
+                                <p class="review-author">- Sarah J.</p>
+                            </div>
+                            <div class="review">
+                                <p class="review-text">"A charming place with a wonderful atmosphere. The service is excellent!"</p>
+                                <p class="review-author">- Mike L.</p>
+                            </div>
+                            <div class="review">
+                                <p class="review-text">"I love their cinnamon buns! Best I've ever had!"</p>
+                                <p class="review-author">- Emily R.</p>
+                            </div>
+                            <div class="review">
+                                <p class="review-text">"Retro Diner has the best burgers in town. Highly recommend!"</p>
+                                <p class="review-author">- John D.</p>
+                            </div>
+                        </section>
+
+            <!-- Write Review Section -->
             <section class="write-review-section">
                 <h2>Write a Review</h2>
                 <form id="review-form">

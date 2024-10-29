@@ -1,6 +1,6 @@
 <!--
 Name: Christian Rose
-Date: 2024-10-22
+Date: 2024-10-28
 Description: Sprint Ordering Page. This page allows customers to place an order for food items. 
 The page includes a form with fields for selecting a menu item, entering a quantity, 
 and providing customer information. The form also includes a submit button. When the form is submitted, 
@@ -90,25 +90,56 @@ The page uses a separate CSS file for styling and a separate JavaScript file for
                             <option value="Cinnamon Buns">Cinnamon Buns - $1.50</option>
                         </select>
                     </div>
-            
+                    <!-- Quantity Selection -->
                     <div class="quantity">
                         <label for="quantity">Quantity:</label>
                         <input type="number" id="quantity" min="1" required>
                     </div>
+                    <!-- Customer Information Section -->
                     <div class="customer-info">
                         <label for="customer-name">Your Name:</label>
                         <input type="text" id="customer-name" required>
                         <label for="customer-email">Your Email:</label>
                         <input type="email" id="customer-email" required>
                     </div>
+                    <!-- Payment Information Section -->
+                    <h3>Payment Information</h3>
+                    <div class="payment-methods">
+
+                        <!-- Pay by Card Option -->
+                        <div class="pay-by-card-info">
+                            <label class="credit-card-label">Pay by Card</label>
+                            <input type="radio" name="payment-method" value="pay-by-card" checked />
+                        </div>
+                    
+                        <!-- Credit Card Information Section -->
+                        <div class="credit-card-info">
+                            <label for="card-number">Card Number:</label>
+                            <input type="text" id="card-number" required placeholder="1234 5678 9012 3456" maxlength="19">
+                            
+                            <label for="expiry-date">Expiry Date (MM/YY):</label>
+                            <input type="text" id="expiry-date" required placeholder="MM/YY" maxlength="5">
+                            
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" required placeholder="123" maxlength="3">
+                        </div>
+                    
+                        <!-- Pay on Pickup Option -->
+                        <div class="pay-on-pickup-info">
+                            <label class="pay-on-pickup-label">Pay on Pickup</label>
+                            <input type="radio" name="payment-method" value="pay-on-pickup" />
+                        </div>
+                    </div>
+                    
+                    <!-- Submit Button -->
                     <button type="submit" class="neon-button">Submit Order</button>
+
+                    <!-- Confirmation message div -->
+                    <div class="order-confirmation">
+                        <h3>Order Confirmation</h3>
+                        <div id="confirmation-message" class="confirmation-message hidden"></div>
+                    </div>
                 </form>
-                <!-- Confirmation message div -->
-                <div class="order-confirmation">
-                    <h3>Order Confirmation</h3>
-                    <div id="confirmation-message" class="confirmation-message hidden"></div>
-                </div>
-                
             </section>
         </div>
 

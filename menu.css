@@ -1,5 +1,6 @@
 /* General styles for the menu page */
 
+/* General Styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -9,27 +10,30 @@ body, html {
     align-items: center;
 }
 
+/* Background Styles */
 .background {
-    /* full height section */
     height: 100%;
     background-image: url('./Images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    display: flex; 
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Stack content vertically */
-}   
+}  
 
+/* Content Wrapper */
 .content-wrapper {
-    padding: 100px 20px; /* Padding to create space for the content */
-    max-width: 800px;    /* Set max-width for the content area */
-    margin: 0 auto;      /* Center the content */
-    color: white;        /* Text color for visibility */
-    text-align: center;
+    max-width: 800px; 
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px; 
 }
 
+/* Header Styles */
 .header {
     height: 250px;
     width: 100%;
@@ -39,10 +43,10 @@ body, html {
     width: 20%;
     height: auto;
     border-radius: 50%;
-    border: 5px solid #ff007b; /* Add pink neon border */
+    border: 5px solid #ff007b;
     box-shadow: 
         0 0 20px rgba(255, 0, 123, 0.8),
-        0 0 30px rgba(255, 0, 123, 0.6); /* Add glow effect */
+        0 0 30px rgba(255, 0, 123, 0.6); 
     transform: rotate(-25deg);
     float: top;
 }
@@ -79,8 +83,7 @@ body, html {
 }
 
 .neon-nav ul li a:hover {
-    /* Neon effect */
-    color: #ff007b; /* Neon pink color */
+    color: #ff007b; 
 }
 
 .neon-border-container {
@@ -91,16 +94,14 @@ body, html {
 }
 
 .neon-border {
-    border-bottom: 10px solid #ff007b; /* Neon pink color */
-    width: 90%;
-    /* Neon glow effect on the bottom only */
+    border-bottom: 10px solid #ff007b; 
     box-shadow: 
-        0 10px 20px rgba(255, 0, 123, 0.8),  /* Glow below the border */
+        0 10px 20px rgba(255, 0, 123, 0.8),  
         0 15px 30px rgba(255, 0, 123, 0.6),
         0 20px 40px rgba(255, 0, 123, 0.4),
         0 25px 50px rgba(255, 0, 123, 0.2);
     
-    padding-bottom: 10px; /* Extra padding for visibility */
+    padding-bottom: 10px; 
 }
 
 .email-form{
@@ -115,99 +116,115 @@ body, html {
 .email-form input {
     padding: 8px;
     border-radius: 5px;
-    border: 2px solid #ff007b; /* Neon pink border */
-    background-color: #111; /* Dark background like the rest of the site */
-    color: #fff; /* White text for readability */
-    box-shadow: 0 0 10px rgba(255, 0, 123, 0.5); /* Subtle pink glow */
+    border: 2px solid #ff007b; 
+    background-color: #111; 
+    color: #fff; 
+    box-shadow: 0 0 10px rgba(255, 0, 123, 0.5); 
     transition: 0.3s ease-in-out;
 }
 
 .email-form input:focus {
     outline: none;
-    box-shadow: 0 0 15px rgba(255, 0, 123, 0.8); /* More intense glow on focus */
+    box-shadow: 0 0 15px rgba(255, 0, 123, 0.8); 
 }
 
 .email-form button {
     padding: 8px 15px;
     border-radius: 5px;
-    border: 2px solid #ff007b; /* Neon pink border */
-    background-color: #ff007b; /* Neon pink background */
-    color: #fff; /* White text */
+    border: 2px solid #ff007b; 
+    background-color: #ff007b; 
+    color: #fff; 
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    box-shadow: 0 0 10px rgba(255, 0, 123, 0.5); /* Pink glow on button */
+    box-shadow: 0 0 10px rgba(255, 0, 123, 0.5); 
 }
 
 .email-form button:hover {
-    background-color: #111; /* Dark background on hover */
-    color: #ff007b; /* Neon pink text on hover */
-    box-shadow: 0 0 15px rgba(255, 0, 123, 0.8); /* Stronger pink glow on hover */
+    background-color: #111; 
+    color: #ff007b; 
+    box-shadow: 0 0 15px rgba(255, 0, 123, 0.8); 
 }
 
 .menu-section {
-    margin-top: 50px; /* Space from the top */
-    padding: 50px 20px; /* Padding for the section */
-    background-color: rgba(20, 20, 20, 0.8); /* Darker background */
-    border: 2px solid #ff007b; /* Neon pink border */
+    flex: 1; 
+    margin-top: 50px; 
+    padding: 50px 20px; 
+    background-color: rgba(20, 20, 20, 0.8); 
+    border: 2px solid #ff007b; 
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 0, 123, 0.6); /* Pink glow effect */
-    color: white; /* White text */
-    text-align: center; /* Center align text */
+    box-shadow: 0 0 20px rgba(255, 0, 123, 0.6); 
+    color: white; 
+    text-align: center; 
 }
 
+
 .menu-section h2 {
-    color: #ff007b; /* Neon pink header */
+    color: #ff007b; 
 }
 
 .menu-item {
-    margin-bottom: 30px; /* Space between menu items */
+    margin-bottom: 30px; 
     padding: 20px;
-    border: 2px solid #ff007b; /* Neon pink border */
+    border: 2px solid #ff007b; 
     border-radius: 10px;
-    /*background-color: #222; /* Darker background for items */
-    transition: transform 0.3s ease; /* Smooth scaling effect */
+    transition: transform 0.3s ease; 
+    background-color: rgba(20, 20, 20, 0.7); 
+    text-align: center; 
 }
 
 .menu-item:hover {
-    transform: scale(1.05); /* Scale up on hover */
+    transform: scale(1.05); 
 }
 
 .menu-image {
-    width: 100%; /* Responsive images */
-    max-width: 300px; /* Max width for images */
-    border-radius: 5px; /* Rounded corners for images */
+    width: 100%; 
+    max-width: 300px; 
+    height: 250px; 
+    border-radius: 25px; 
 }
 
 .menu-item h3 {
-    color: #df1e9e; /* Slightly lighter pink for item names */
+    color: #df1e9e; 
 }
 
 .menu-item p {
-    color: #ccc; /* Light gray for description and price */
+    color: #ccc; 
 }
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
     .menu-section {
-        margin-top: 100px; /* Reduced margin for smaller screens */
-        padding: 30px 10px; /* Adjusted padding for smaller screens */
+        margin-top: 100px; 
+        padding: 30px 10px; 
     }
 
     .menu-item {
-        margin-bottom: 20px; /* Adjusted spacing for smaller screens */
+        margin-bottom: 20px; 
     }
 }
 
 /* CSS Addition */
+
+.menu-frie {
+    float: right;
+    width: 100%; 
+    max-width: 200px; 
+    height: 150px;
+    border-radius: 25px; 
+}
+
+.menu-dessert {
+    float: right;
+    width: 100%; 
+    max-width: 200px; 
+    height: 150px;
+    border-radius: 25px;
+}
+
 .Extra{
     float:right;
     padding:10px;
     border-radius: 50%;
-}
-
-ul{
-    text-align: left;
-    border: 3px;
 }
 
 .Align {
@@ -219,7 +236,7 @@ ul{
 .footer {
     padding-top: 30px ;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.5); 
     padding: 20px;
     border-radius: 10px;
 }
@@ -239,5 +256,26 @@ ul{
 }
 
 .social-icon:hover {
-    color: #ff007b; /* Pink hover effect */
+    color: #ff007b; 
+}
+
+ul {
+    text-align: left;
+    border: 3px;
+    list-style-type: none; 
+    padding: 0;
+    margin: 0; 
+}
+
+.side-extras,
+.desserts {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.side-extras li,
+.desserts li {
+    text-align: center; 
+    margin: 10px 0; 
 }

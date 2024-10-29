@@ -1,3 +1,5 @@
+// Home page JavaScript
+
 window.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY; // Use scrollY instead of pageYOffset
     const backgroundSection = document.querySelector('.content-wrapper');

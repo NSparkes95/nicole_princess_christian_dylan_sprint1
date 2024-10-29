@@ -1,3 +1,12 @@
+// JS for the sprint ordering page. 
+// This code handles form submission, validates inputs, calculates the total bill, and stores the order in localStorage.
+
+// Function to validate input with a regex pattern
+function validateInput(value, pattern) {
+    const regex = new RegExp(pattern);
+    return regex.test(value);
+}
+
 // Function to validate form fields
 function validateForm(quantity, email) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -6,7 +15,7 @@ function validateForm(quantity, email) {
         alert('Please enter a valid quantity (greater than zero).');
         return false;
     }
-    if (!emailPattern.test(email)) {
+    if (!validateInput(email, emailPattern)) {
         console.log('Invalid email:', email);
         alert('Please enter a valid email address.');
         return false;
@@ -68,9 +77,59 @@ function calculateBill(quantity, selectedItem, sides, dessert) {
     return ((itemPrice + sidesPrice + dessertPrice) * quantity).toFixed(2); // Return total bill rounded to 2 decimal places
 }
 
+// Function to validate credit card information
+function validateCreditCard(cardNumber, expiryDate, cvv) {
+    const cardNumberPattern = /^\d{4} \d{4} \d{4} \d{4}$/; // Format: 1234 5678 9012 3456
+    const expiryPattern = /^(0[1-9]|1[0-2])\/\d{2}$/; // Format: MM/YY
+    const cvvPattern = /^\d{3}$/; // 3 digits
+
+    if (!validateInput(cardNumber, cardNumberPattern)) {
+        alert('Please enter a valid card number (format: 1234 5678 9012 3456).');
+        return false;
+    }
+    if (!validateInput(expiryDate, expiryPattern)) {
+        alert('Please enter a valid expiry date (format: MM/YY).');
+        return false;
+    }
+    if (!validateInput(cvv, cvvPattern)) {
+        alert('Please enter a valid CVV (3 digits).');
+        return false;
+    }
+    return true; // Validation passed
+}
+
+// Event listener for payment method selection
+document.addEventListener('DOMContentLoaded', () => {
+    const paymentMethodRadios = document.querySelectorAll('input[name="payment-method"]');
+    const creditCardInfo = document.querySelector('.credit-card-info');
+
+    paymentMethodRadios.forEach(radio => {
+        radio.addEventListener('change', (event) => {
+            if (event.target.value === 'pay-on-pickup') {
+                creditCardInfo.style.display = 'none';
+                document.getElementById('card-number').required = false;
+                document.getElementById('expiry-date').required = false;
+                document.getElementById('cvv').required = false;
+            } else {
+                creditCardInfo.style.display = 'block';
+                document.getElementById('card-number').required = true;
+                document.getElementById('expiry-date').required = true;
+                document.getElementById('cvv').required = true;
+            }
+        });
+    });
+
+    // Trigger change event on page load to set the initial state
+    paymentMethodRadios.forEach(radio => {
+        if (radio.checked) {
+            radio.dispatchEvent(new Event('change'));
+        }
+    });
+});
+
 // Event listener for form submission
 document.getElementById('order-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); // Prevent default submission
 
     const mainSelect = document.getElementById('main-select');
     const sidesSelect = document.getElementById('sides-select');
@@ -79,6 +138,10 @@ document.getElementById('order-form').addEventListener('submit', function(event)
     const customerName = document.getElementById('customer-name').value;
     const customerEmail = document.getElementById('customer-email').value;
 
+    const cardNumber = document.getElementById('card-number').value;
+    const expiryDate = document.getElementById('expiry-date').value;
+    const cvv = document.getElementById('cvv').value;
+
     const selectedItem = mainSelect.value;
     const sides = sidesSelect.value;
     const dessert = dessertSelect.value;
@@ -86,8 +149,10 @@ document.getElementById('order-form').addEventListener('submit', function(event)
 
     console.log('Form submitted:', { selectedItem, sides, dessert, quantity, customerName, customerEmail });
 
-    // Validate form inputs
-    if (!validateForm(quantity, customerEmail)) {
+    // Validate all fields including credit card info
+    const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+    if (!validateForm(quantity, customerEmail) || 
+        (paymentMethod === 'pay-by-card' && !validateCreditCard(cardNumber, expiryDate, cvv))) {
         return; // Exit if validation fails
     }
 
@@ -107,9 +172,6 @@ document.getElementById('order-form').addEventListener('submit', function(event)
     confirmationMessage.classList.remove('hidden');
     confirmationMessage.classList.add('visible');
 
-    // Log confirmation message display
-    console.log('Confirmation message displayed:', confirmationMessage.textContent);
-
     // Clear form fields
     mainSelect.selectedIndex = 0;
     sidesSelect.selectedIndex = 0;
@@ -117,6 +179,9 @@ document.getElementById('order-form').addEventListener('submit', function(event)
     quantityInput.value = '';
     document.getElementById('customer-name').value = '';
     document.getElementById('customer-email').value = '';
+    document.getElementById('card-number').value = '';
+    document.getElementById('expiry-date').value = '';
+    document.getElementById('cvv').value = '';
 
     // Disable submit button to prevent multiple submissions
     const submitButton = event.target.querySelector('button[type="submit"]');

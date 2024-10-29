@@ -1,3 +1,5 @@
+/* Home Page Styles */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -152,9 +154,9 @@ body, html {
 
 .slideshow-container {
     position: relative;
-    max-width: 70%;
-    height: 400px;
-    padding-top: 200px;
+    max-width: 50%;
+    height: 500px;
+    padding-top: 0px;
     overflow: hidden;
     border-radius: 10px;
     display: flex;
@@ -211,6 +213,7 @@ body, html {
 .history-title {
     font-size: 18pt;
     color: white;
+    margin-top: 180px;
     margin-bottom: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -342,4 +345,68 @@ textarea {
 
 .social-icon:hover {
     color: #ff007b;
+}
+
+.location-hours {
+    background-color: rgba(34, 34, 34, 0.8);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.location-hours h2 {
+    font-size: 28px;
+    color: #ff007b;
+    margin-bottom: 20px;
+}
+
+.location-details p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.location-details ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.reviews-section {
+    background-color: rgba(34, 34, 34, 0.9);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    font-size: 28px;
+    color: #ff007b;
+    margin-bottom: 20px;
+}
+
+.review {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ff007b; /* Neon pink border */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.review-author {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 10px;
 }
