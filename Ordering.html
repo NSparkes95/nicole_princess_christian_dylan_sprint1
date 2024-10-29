@@ -1,0 +1,157 @@
+<!--
+Name: Christian Rose
+Date: 2024-10-28
+Description: Sprint Ordering Page. This page allows customers to place an order for food items. 
+The page includes a form with fields for selecting a menu item, entering a quantity, 
+and providing customer information. The form also includes a submit button. When the form is submitted, 
+the order is added to a list of orders displayed on the page.
+The page also includes a confirmation message that is displayed when an order is submitted successfully. 
+The page uses a separate CSS file for styling and a separate JavaScript file for interactivity.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="Home.css"> <!-- Link to homepage stylesheet -->
+    <link rel="stylesheet" href="Ordering.css"> <!-- Link to ordering stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <header class="header">
+            <img src="Images/logo.jpg" alt="Sprint Logo" class="circular-logo">
+            <nav class="neon-nav">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="history">The History</a></li>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="Ordering.html">Order</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="neon-border-container">
+                <div class="neon-border"></div>
+            </div>
+            <form id="contest-form" class="email-form">
+                <input type="email" id="contest-email" placeholder="Enter your email" required>
+                <button type="submit">Enter Contest</button>
+            </form>
+        </header>
+
+        <div class="content-wrapper">
+            <!-- Image Section -->
+            <div class="image-section">
+                <img src="Images/OrderHere.jpg" alt="Image for Ordering" class="ordering-image">
+            </div>
+
+            <section id="order" class="order-section content-wrapper">
+                <h2>Place Your Order</h2>
+                <form id="order-form">
+                    <!-- Main Selection -->
+                    <div class="menu-item">
+                        <label for="main-select">Select a Main Item:</label>
+                        <select id="main-select" required>
+                            <option value="" disabled selected>Select a Main Item</option>
+                            <option value="Big Gary Southern Chicken">Big Gary Southern Chicken - $9.99</option>
+                            <option value="Veggie Delight Burger">Veggie Delight Burger - $8.99</option>
+                            <option value="Canadian Double Stack">Canadian Double Stack - $6.99</option>
+                            <option value="Signature Combo">Signature Combo - $12.99</option>
+                            <option value="Power House HotDogs">Power House HotDogs - $10.99</option>
+                            <option value="Retro Salad">Retro Salad - $5.99</option>
+                        </select>
+                    </div>
+            
+                    <!-- Sides/Extras Selection -->
+                    <div class="menu-item">
+                        <label for="sides-select">Select Sides/Extras:</label>
+                        <select id="sides-select">
+                            <option value="" disabled selected>Select Sides/Extras</option>
+                            <option value="None">None</option>
+                            <option value="Fries">Fries</option>
+                            <option value="Sweet Potato Fries">Sweet Potato Fries (+ $1)</option>
+                            <option value="Grilled Chicken">Grilled Chicken (+ $3)</option>
+                            <option value="Poutines">Poutines</option>
+                            <option value="Onion Rings">Onion Rings</option>
+                            <option value="Salads">Salads (+ $1)</option>
+                        </select>
+                    </div>
+            
+                    <!-- Desserts Selection -->
+                    <div class="menu-item">
+                        <label for="dessert-select">Select a Dessert:</label>
+                        <select id="dessert-select">
+                            <option value="" disabled selected>Select a Dessert</option>
+                            <option value="None">None</option>
+                            <option value="Chocolate Glazed Donut">Chocolate Glazed Donut - $3</option>
+                            <option value="Butter Croissant">Butter Croissant - $2</option>
+                            <option value="Ice-Cream Fudge Cake">Ice-Cream Fudge Cake - $2.50</option>
+                            <option value="Cinnamon Buns">Cinnamon Buns - $1.50</option>
+                        </select>
+                    </div>
+                    <!-- Quantity Selection -->
+                    <div class="quantity">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" min="1" required>
+                    </div>
+                    <!-- Customer Information Section -->
+                    <div class="customer-info">
+                        <label for="customer-name">Your Name:</label>
+                        <input type="text" id="customer-name" required>
+                        <label for="customer-email">Your Email:</label>
+                        <input type="email" id="customer-email" required>
+                    </div>
+                    <!-- Payment Information Section -->
+                    <h3>Payment Information</h3>
+                    <div class="payment-methods">
+
+                        <!-- Pay by Card Option -->
+                        <div class="pay-by-card-info">
+                            <label class="credit-card-label">Pay by Card</label>
+                            <input type="radio" name="payment-method" value="pay-by-card" checked />
+                        </div>
+                    
+                        <!-- Credit Card Information Section -->
+                        <div class="credit-card-info">
+                            <label for="card-number">Card Number:</label>
+                            <input type="text" id="card-number" required placeholder="1234 5678 9012 3456" maxlength="19">
+                            
+                            <label for="expiry-date">Expiry Date (MM/YY):</label>
+                            <input type="text" id="expiry-date" required placeholder="MM/YY" maxlength="5">
+                            
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" required placeholder="123" maxlength="3">
+                        </div>
+                    
+                        <!-- Pay on Pickup Option -->
+                        <div class="pay-on-pickup-info">
+                            <label class="pay-on-pickup-label">Pay on Pickup</label>
+                            <input type="radio" name="payment-method" value="pay-on-pickup" />
+                        </div>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" class="neon-button">Submit Order</button>
+
+                    <!-- Confirmation message div -->
+                    <div class="order-confirmation">
+                        <h3>Order Confirmation</h3>
+                        <div id="confirmation-message" class="confirmation-message hidden"></div>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="social-media-icons">
+                <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="Ordering.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
