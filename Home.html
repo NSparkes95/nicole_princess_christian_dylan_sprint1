@@ -1,13 +1,13 @@
 <!--
-Date: 2024-10-28
-Description: Home Page. This page serves as the main landing page for the Retro Diner website.
+Name: Nicole Sparkes
+Date: 2024-10-22
+Description: Home page. This page displays the home page for the Retro Diner. 
 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprint</title>
     <link rel="stylesheet" href="Home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -16,27 +16,27 @@ Description: Home Page. This page serves as the main landing page for the Retro 
 <body>
     <div class="background">
         <header class="header">
-            <img src="Images/logo.jpg" alt="Sprint Logo" class="circular-logo">
+            <img src = "Images/logo.jpg" alt="Sprint Logo" class="circular-logo">
             <nav class="neon-nav">
                 <ul>
                     <li><a href="Home.html">Home</a></li>
-                    <li><a href="#history">The History</a></li>
+                    <li><a href="history.html">The History</a></li>
                     <li><a href="Menu.html">Menu</a></li>
                     <li><a href="Ordering.html">Order</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
-            <div class="neon-border-container">
-                <div class="neon-border"></div>
+            <div class = "neon-border-container">
+                <div class="neon-border" ></div>
             </div>
             <form id="contest-form" class="email-form">
                 <input type="email" id="contest-email" placeholder="Enter your email" required>
-                <button type="submit">Enter Contest</button>
+                <button type="submit">Enter to win a $50 gift card!</button>
             </form>
             
         </header>
+        
         <main>
-
             <!-- History Section -->
             <div class="history-section">
                 <h2 class="history-title">Welcome to Retro Diner: A Timeless Icon</h2>
@@ -54,7 +54,7 @@ Description: Home Page. This page serves as the main landing page for the Retro 
                 <!-- History Content -->
                 <div class="history-content">
                     <p class="history-description">
-                        Established in 1952 by Douglas "Duke" Rayson, Retro Diner has been a beloved destination for generations, blending classic American charm with larger-than-life stories.
+                        Established in 1952 by Douglas "Duke" Rayson, Retro Diner has been a beloved destination for generations, blending classic American charm with larger-than-life stories. From its vintage chrome exterior to the neon-lit booths inside, Retro Diner has always been more than just a place to eat. It's where car lovers, road-trippers, and curious locals gather to share a meal and swap stories. Each generation of the Rayson family has brought its own unique touch, from Duke's car memorabilia to his son Jack’s “Time Traveler Tuesdays” and cosmic pancakes. Today, Duke's granddaughter Lily keeps the legend alive, adding a modern twist while staying true to the diner’s rich history and mysterious charm. Stop in for a bite and become part of the Retro Diner story!
                         <a href="history.html" class="link-about">[Read More]</a>
                     </p>
                 </div>
@@ -121,8 +121,10 @@ Description: Home Page. This page serves as the main landing page for the Retro 
                     <button type="submit" class="submit-button">Submit Review</button>
                 </form>
             </section>
+            <div class = "neon-border-container">
+                <div class="neon-border" ></div>
+            </div>
         </main>
-
         <footer class="footer">
             <div class="social-media-icons">
                 <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -130,8 +132,11 @@ Description: Home Page. This page serves as the main landing page for the Retro 
                 <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
             </div>
         </footer>
+        
+        
+       <div class="content-wrapper"></div>
     </div>
-
+   
     <script src="Home.js"></script>
 </body>
 </html>
